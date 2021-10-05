@@ -8,6 +8,11 @@ name: Build, push, and deploy
 on:
   # Triggers the workflow on push request on the main branch for changes in the specified paths.
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+        default: x.x.x
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
