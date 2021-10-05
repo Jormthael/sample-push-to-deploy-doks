@@ -31,7 +31,7 @@ jobs:
     
     # Build a Docker image of your application in your registry and tag the image with the $GITHUB_SHA.
     - name: Build container image
-      run: docker build --file Dockerfile -t ${{ secrets.REGISTRY_NAME }}/python-example:v1 .
+      run: docker build --file Dockerfile .
 
     - name: Log in to DigitalOcean Container Registry with short-lived credentials
       run: doctl registry login --expiry-seconds 1200
